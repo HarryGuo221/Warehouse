@@ -1,0 +1,188 @@
+Object Report
+	Version='4.5'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End 
+	Object Printer
+	End
+	Object DetailGrid
+		Object Recordset
+			ConnectionString='Provider=SQLOLEDB.1;Password=123;Persist Security Info=True;User ID=sa;Initial Catalog=Storehouse;Data Source=222.198.46.222;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=404-2;Use Encryption for Data=False;Tag with column collation when possible=False'
+			QuerySQL='select UserId as 用户编码, UserName as 用户名, ynAdmin as 是否系统管理员,JobPosition as 职位,SmsTel as 接收短信电话号码 \r\nfrom T_Users\r\nwhere UserName like '%:PUserName%''
+			Items Field
+				Item
+					Name='用户编码'
+				End
+				Item
+					Name='用户名'
+				End
+				Item
+					Name='是否系统管理员'
+					Type=Boolean
+				End
+				Item
+					Name='职位'
+				End
+				Item
+					Name='接收短信电话号码'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='用户编码'
+				Width=2.38125
+			End
+			Item
+				Name='用户名'
+				Width=2.80458
+			End
+			Item
+				Name='是否系统管理员'
+				Width=3.20146
+			End
+			Item
+				Name='职位'
+				Width=2.69875
+			End
+			Item
+				Name='接收短信电话号码'
+				Width=3.81
+			End
+		End
+		Object ColumnContent
+			Height=0.635
+			Items ColumnContentCell
+				Item
+					Column='用户编码'
+					DataField='用户编码'
+				End
+				Item
+					Column='用户名'
+					DataField='用户名'
+				End
+				Item
+					Column='是否系统管理员'
+					DataField='是否系统管理员'
+				End
+				Item
+					Column='职位'
+					DataField='职位'
+				End
+				Item
+					Column='接收短信电话号码'
+					DataField='接收短信电话号码'
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0.635
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='用户编码'
+					Text='用户编码'
+				End
+				Item
+					GroupTitle=F
+					Column='用户名'
+					Text='用户名'
+				End
+				Item
+					GroupTitle=F
+					Column='是否系统管理员'
+					Text='是否系统管理员'
+				End
+				Item
+					GroupTitle=F
+					Column='职位'
+					Text='职位'
+				End
+				Item
+					GroupTitle=F
+					Column='接收短信电话号码'
+					Text='接收短信电话号码'
+				End
+			End
+		End
+	End
+	Items Parameter
+		Item
+			Name='PUserName'
+			Value='a'
+		End
+		Item
+			Name='PUserId'
+		End
+	End
+	Items Section
+		Item
+			Type=PageHeader
+			Height=1.00542
+			Items Control
+				Item
+					Type=StaticBox
+					Name='StaticBox1'
+					Center=Horizontal
+					Left=6.69396
+					Top=0.396875
+					Width=2.61938
+					Height=0.608542
+					Text='用户信息报表'
+				End
+			End
+		End
+		Item
+			Type=PageFooter
+			Height=1.32292
+			Items Control
+				Item
+					Type=MemoBox
+					Name='MemoBox3'
+					Left=0.211667
+					Top=0.396875
+					Width=6.19125
+					Height=0.608542
+					Text='打印时间：[#SystemVar(CurrentDateTime):yyyy年MM月dd日 HH:mm:ss#]'
+				End
+				Item
+					Type=MemoBox
+					Name='MemoBox2'
+					Anchor=[Top|Right]
+					Left=12.0121
+					Top=0.396875
+					Width=3.78354
+					Height=0.608542
+					Text='第[#SystemVar(PageNumber)#]页 共[#SystemVar(PageCount)#]页'
+				End
+			End
+		End
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			Height=1.79917
+			Items Control
+				Item
+					Type=MemoBox
+					Name='MemoBox4'
+					Center=Horizontal
+					Left=5.31813
+					Top=0.211667
+					Width=5.3975
+					Height=1.37583
+					CanGrow=T
+					Text='当前参数：\r\n用户编码：[#PUserId#]\r\n用户名：[#PUserName#]'
+				End
+			End
+		End
+		Item
+			Type=ReportFooter
+			Name='ReportFooter1'
+			Height=1.32292
+		End
+	End
+End

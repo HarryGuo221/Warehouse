@@ -1,0 +1,380 @@
+Object Report
+	Version='4.5'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End
+	Object Printer
+		Oriention=Landscape
+		LeftMargin=0
+		RightMargin=0
+	End
+	Object DetailGrid
+		Object Recordset
+			ConnectionString='Provider=SQLOLEDB.1;Password=LLzy62563076;Persist Security Info=True;User ID=sa;Initial Catalog=Storehouse;Data Source=CUSKER;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=CUSKER;Use Encryption for Data=False;Tag with column collation when possible=False'
+			Items Field
+				Item
+					Name='单据日期'
+					Type=DateTime
+					Format='yyyy/MM/dd'
+				End
+				Item
+					Name='客户编号'
+				End
+				Item
+					Name='客户名称'
+				End
+				Item
+					Name='商品编号'
+				End
+				Item
+					Name='商品名称'
+				End
+				Item
+					Name='含税金额'
+					Type=Currency
+					Format='#,##0.00'
+				End
+				Item
+					Name='验收员'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='单据日期'
+				Width=2.16958
+			End
+			Item
+				Name='客户编号'
+				Width=2.80458
+			End
+			Item
+				Name='客户名称'
+				Width=5.60917
+			End
+			Item
+				Name='商品编号'
+				Width=4.39208
+			End
+			Item
+				Name='商品名称'
+				Width=7.01146
+			End
+			Item
+				Name='含税金额'
+				Width=4.18042
+			End
+			Item
+				Name='验收员'
+				Width=3.62479
+			End
+		End
+		Object ColumnContent
+			Height=0.396875
+			Items ColumnContentCell
+				Item
+					Column='单据日期'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='单据日期'
+				End
+				Item
+					Column='客户编号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='客户编号'
+				End
+				Item
+					Column='客户名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='客户名称'
+				End
+				Item
+					Column='商品编号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='商品编号'
+				End
+				Item
+					Column='商品名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='商品名称'
+				End
+				Item
+					Column='含税金额'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleRight
+					DataField='含税金额'
+				End
+				Item
+					Column='验收员'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='验收员'
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0.396875
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='单据日期'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='单据日期'
+				End
+				Item
+					GroupTitle=F
+					Column='客户编号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='客户编号'
+				End
+				Item
+					GroupTitle=F
+					Column='客户名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='客户名称'
+				End
+				Item
+					GroupTitle=F
+					Column='商品编号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='商品编号'
+				End
+				Item
+					GroupTitle=F
+					Column='商品名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='商品名称'
+				End
+				Item
+					GroupTitle=F
+					Column='含税金额'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='含税金额'
+				End
+				Item
+					GroupTitle=F
+					Column='验收员'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='验收员'
+				End
+			End
+		End
+		Items Group
+			Item
+				Name='Group1'
+				Object GroupHeader
+					Height=0
+				End
+				Object GroupFooter
+					BackColor=ScrollBar
+					Height=0.608542
+					Items Control
+						Item
+							Type=StaticBox
+							Name='StaticBox1'
+							BackColor=Window
+							Object Font
+								Name='宋体'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Width=1.19063
+							Height=0.608542
+							Text='合计'
+						End
+						Item
+							Type=SummaryBox
+							Name='SummaryBox1'
+							BackColor=Window
+							Object Font
+								Name='宋体'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							AlignColumn='含税金额'
+							Left=21.9869
+							Width=4.20688
+							Height=0.608542
+							TextAlign=MiddleRight
+							DataField='含税金额'
+						End
+					End
+				End
+			End
+			Item
+				Name='Group2'
+				ByFields='客户编号'
+				Object GroupHeader
+					Height=0
+				End
+				Object GroupFooter
+					Height=0.635
+					Items Control
+						Item
+							Type=StaticBox
+							Name='StaticBox2'
+							Object Font
+								Name='宋体'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Width=1.19063
+							Height=0.608542
+							Text='小计'
+						End
+						Item
+							Type=SummaryBox
+							Name='SummaryBox2'
+							Object Font
+								Name='宋体'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							AlignColumn='含税金额'
+							Left=21.9869
+							Width=4.20688
+							Height=0.608542
+							TextAlign=MiddleRight
+							DataField='含税金额'
+						End
+					End
+				End
+			End
+		End
+	End
+	Items Parameter
+		Item
+			Name='Title'
+		End
+	End
+	Items Section
+		Item
+			Type=PageHeader
+			Height=0.608542
+			Items Control
+				Item
+					Type=MemoBox
+					Name='MemoBox2'
+					Object Font
+						Name='楷体_GB2312'
+						Size=157500,0
+						Weight=400
+						Charset=134
+					End
+					Center=Horizontal
+					Left=10.16
+					Width=9.39271
+					Height=0.608542
+					TextAlign=MiddleCenter
+					Text='[#Title#]'
+				End
+			End
+		End
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			Height=1.00542
+			Items Control
+				Item
+					Type=MemoBox
+					Name='MemoBox1'
+					Object Font
+						Name='宋体'
+						Size=120000,0
+						Weight=400
+						Charset=134
+					End
+					Center=Horizontal
+					Left=10.16
+					Width=9.39271
+					Height=0.79375
+					TextAlign=MiddleCenter
+					Text='预付款查询'
+				End
+			End
+		End
+	End
+End

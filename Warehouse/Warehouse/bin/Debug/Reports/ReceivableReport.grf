@@ -1,0 +1,312 @@
+Object Report
+	Version='4.5'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400 
+		Charset=134
+	End  
+	Object Printer
+		Size=256 
+		LeftMargin=1
+		TopMargin=1
+		RightMargin=1
+		BottomMargin=1
+	End
+	Object DetailGrid
+		Object Recordset
+			ConnectionString='Provider=SQLOLEDB.1;Password=LLzy62563076;Persist Security Info=True;User ID=sa;Initial Catalog=Storehouse;Data Source=192.168.1.103;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=HOTSAUCE-PC;Use Encryption for Data=False;Tag with column collation when possible=False'
+			QuerySQL='select CurWorkMonth 工作年月,OccurTime 核销日期,CustId 客户代码,CustName 客户名称,InMoney 核销金额,\r\nPayMethod 支付方式,PinZhengHao 凭证号, Memo 备注\r\n from T_Financial\r\n'
+			Items Field
+				Item
+					Name='工作年月'
+				End
+				Item
+					Name='核销日期'
+					Type=DateTime
+				End
+				Item
+					Name='客户代码'
+				End
+				Item
+					Name='客户名称'
+				End
+				Item
+					Name='核销金额'
+					Type=Float
+				End
+				Item
+					Name='支付方式'
+				End
+				Item
+					Name='凭证号'
+				End
+				Item
+					Name='备注'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='工作年月'
+				Width=1.56104
+			End
+			Item
+				Name='核销日期'
+				Width=1.40229
+			End
+			Item
+				Name='客户代码'
+				Width=2.59292
+			End
+			Item
+				Name='客户名称'
+				Width=7.80521
+			End
+			Item
+				Name='核销金额'
+				Width=2.01083
+			End
+			Item
+				Name='支付方式'
+				Width=1.69333
+			End
+			Item
+				Name='凭证号'
+				Width=1.69333
+			End
+			Item
+				Name='备注'
+				Width=1.69333
+			End
+		End
+		Object ColumnContent
+			Height=0.608542
+			Items ColumnContentCell
+				Item
+					Column='工作年月'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='工作年月'
+				End
+				Item
+					Column='核销日期'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='核销日期'
+				End
+				Item
+					Column='客户代码'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='客户代码'
+				End
+				Item
+					Column='客户名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					CanGrow=T
+					WordWrap=T
+					DataField='客户名称'
+				End
+				Item
+					Column='核销金额'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleRight
+					DataField='核销金额'
+				End
+				Item
+					Column='支付方式'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='支付方式'
+				End
+				Item
+					Column='凭证号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='凭证号'
+				End
+				Item
+					Column='备注'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					DataField='备注'
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0.608542
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='工作年月'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='工作年月'
+				End
+				Item
+					GroupTitle=F
+					Column='核销日期'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='核销日期'
+				End
+				Item
+					GroupTitle=F
+					Column='客户代码'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='客户代码'
+				End
+				Item
+					GroupTitle=F
+					Column='客户名称'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='客户名称'
+				End
+				Item
+					GroupTitle=F
+					Column='核销金额'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='核销金额'
+				End
+				Item
+					GroupTitle=F
+					Column='支付方式'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='支付方式'
+				End
+				Item
+					GroupTitle=F
+					Column='凭证号'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='凭证号'
+				End
+				Item
+					GroupTitle=F
+					Column='备注'
+					Object Font
+						Name='宋体'
+						Size=90000,0
+						Weight=400
+						Charset=134
+					End
+					TextAlign=MiddleCenter
+					Text='备注'
+				End
+			End
+		End
+	End
+	Items Section
+		Item
+			Type=PageHeader
+			Height=1.32292
+		End
+		Item
+			Type=PageFooter
+			Height=1.32292
+		End
+		Item
+			Type=ReportHeader
+			Name='ReportHeader1'
+			Height=0.79375
+			Items Control
+				Item
+					Type=MemoBox
+					Name='MemoBox1'
+					Object Font
+						Name='宋体'
+						Size=142500,0
+						Weight=400
+						Charset=134
+					End
+					Center=Horizontal
+					Left=7.48771
+					Width=3.99521
+					Height=0.79375
+					TextAlign=MiddleCenter
+					Text='应收核销查询'
+				End
+			End
+		End
+		Item
+			Type=ReportFooter
+			Name='ReportFooter1'
+			Height=1.32292
+		End
+	End
+End
